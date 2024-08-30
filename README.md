@@ -1,26 +1,26 @@
-#  Neural Network From Scratch
-#### Video Demo: <URL HERE>
+# Neural Network From Scratch
+#### Video Demo: 
 
 #### Description
 
-This project implements a simple neural network from scratch using NumPy to classify images. It includes functionalities for loading and preprocessing data, training a neural network, and making predictions. The neural network uses a basic architecture with one hidden layer and is trained using a standard gradient descent approach. The project demonstrates fundamental concepts of neural network design and training in Python.
+This project represents the implementation, of a simple neural network build using Python and  NumPy to classify images. This project provides functionalities like load and preprocess data, Back propagation, gradient descent, train, and make predictions. The architecture of the neural network used in this project is a very simple one with only one hidden layer, while the training is performed by the classic gradient descent approach. It demonstrates the basic ideas of how to design and train a neural network using Python.
 
 #### Features
 
-- **Data Loading and Preprocessing:** Loads data from a CSV file, shuffles it, and splits it into training and validation sets. Normalizes features for better training performance.
+- **Data Loading and Preprocessing:** This project loads data from a CSV file, shuffles and splits the data into training and validation sets, normalizing features to better train the data.
 - **Neural Network Implementation:** Implements a basic neural network with one hidden layer, using ReLU and softmax activations.
-- **Training and Evaluation:** Trains the neural network with gradient descent, prints accuracy at regular intervals.
-- **Prediction and Visualization:** Generates predictions for samples and displays them using Matplotlib.
+- **Training and Evaluation:** Neural network is trained using gradient descent and prints accuracy at regular intervals.
+- **Prediction and Visualization:** Makes a prediction of samples and visualizes the results using Matplotlib.
 
 #### Installation
 
-To run this project, you'll need Python 3.x and the following packages:
+This project requires Python 3.x and the following packages:
 
-- `numpy`
-- `pandas`
-- `matplotlib`
+* `numpy`
+* `pandas`
+* `matplotlib`
 
-You can install the required packages using pip:
+You can install the required packages with pip, using the following command:
 
 ```bash
 pip install numpy pandas matplotlib
@@ -29,52 +29,52 @@ pip install numpy pandas matplotlib
 #### Usage
 
 1. **Prepare the Data:**
-   - Ensure you have a CSV file with image data in the format expected by the script. The file should be located at `data_file` in the `main()` function. Update the path to your data file as needed.
+The MNIST dataset CSV file should be located in the path of the main() function and depending on your setup, you may have to change the file path in the script.
+ If using another dataset Make sure its in CSV with image data in the format that the script expects is present.
 
-2. **Run the Script:**
-   - Execute the script using Python:
+2. **Running the Script:**
+- Execute it using python as below:
 
      ```bash
      python project.py
      ```
 
-   - The script will:
-     1. Load and shuffle the data.
-     2. Split and normalize the data.
+   - What it does
+     1. Preprocess-read in and shuffle data
+     2. Split and normalization
      3. Train the neural network.
-     4. Display predictions for the first few samples.
+4. Provide predictions for a few first samples.
 
-3. **View Results:**
-   - The script will print the accuracy of the model at regular intervals during training and display sample images with predicted and actual labels.
+3. **See Results:**
+   - The script prints the model's accuracy after some periods of training and shows sample images with their predicted and ground truth labels.
 ----
+ #### Explanation of the Code
 
-#### Code Explanation
-
-- **Data Loading and Shuffling:**
-  - `load_and_shuffle_data(filepath)`: Reads the CSV file and shuffles the data.
-  
-- **Data Splitting and Normalization:**
-  - `split_and_normalize_data(data, dev_size)`: Splits the data into training and validation sets and normalizes feature values.
+- **Loading the Data and Shuffling:**
+  - `load_and_shuffle_data(filepath)`: This function reads the data from the CSV file and performs shuffling on it.
+ 
+- **Split the Data and Normalize It:
+- `split_and_normalize_data(data, dev_size)`: Splits data into training and validation and normalizes feature values.
 
 - **Neural Network Functions:**
-  - `initialize_parameters()`: Initializes network parameters (weights and biases).
-  - `forward_pass()`: Performs a forward pass through the network.
-  - `compute_gradients()`: Computes gradients for backpropagation.
-  - `update_parameters()`: Updates network parameters using gradient descent.
+ - `initialize_parameters()`: It initializes the network parameters - weights and biases.
+- `forward_pass()`: It represents a forward pass.
+- `compute_gradients()`: It computes the gradients using back propagation.
+- `update_parameters()`: It updates the network parameters using gradient descent.
 
 - **Training and Evaluation:**
-  - `train_neural_network(features, labels, learning_rate, num_iterations)`: Trains the neural network and prints accuracy periodically.
+- `train_neural_network(features, labels, learning_rate, num_iterations)`: Trains the neural network and prints accuracy periodically.
   - `predict_labels(activation2)`: Predicts labels from the final output layer.
 
 - **Prediction and Visualization:**
   - `display_prediction(index, features, labels, weights1, bias1, weights2, bias2)`: Displays an image and its predicted and actual labels.
 ---
-
+ 
 #### Note
 
-- This project is intended for educational purposes to illustrate basic neural network operations. For production or more advanced applications, consider using established libraries like TensorFlow or PyTorch.
+- It is for education purposes to demonstrate the basic operation of a neural network. If the code is to be used in a production environment or more professionally, it is highly advised to make use of established libraries such as TensorFlow or PyTorch.
 
-- Adjust the file paths and hyperparameters in the script as needed for your specific use case.
+- Modify the script's file paths and hyperparameters to whatever suits your particular use case.
 
 #### License
 
