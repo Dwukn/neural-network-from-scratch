@@ -1,5 +1,5 @@
 # Neural Network From Scratch
-#### Video Demo: 
+#### Video Demo: https://youtu.be/n-EvUvbxTq0
 
 #### Description
 
